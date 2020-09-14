@@ -90,9 +90,9 @@ class UserView:
 
                 Returns:
                     data: {
-                        email: test@test.com
-                        name: test_user
-                        create_datetime: 2020-09-13 00:00:00
+                        email: test@test.com,
+                        name: test_user,
+                        create_datetime: 2020-09-13 00:00:00,
                         update_datetime: 2020-09-14 00:00:00
                     }
             """

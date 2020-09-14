@@ -7,28 +7,32 @@ class ModuleService:
         self.module_dao = module_dao
 
     def module_list(self, data):
-        module_list_info = self.module_dao.select_module_list(data)
+        try:
+            module_list_info = self.module_dao.select_module_list(data)
 
-        module_list = list()
-        for row in module_list_info:
-            dict_data = dict()
-            dict_data['module_id'] = row['id']
-            dict_data['module_name'] = row['name']
-            dict_data['producers'] = list()
+            module_list = list()
+            for row in module_list_info:
+                dict_data = dict()
+                dict_data['module_id'] = row['id']
+                dict_data['module_name'] = row['name']
+                dict_data['producers'] = list()
 
-            module_list.append(dict_data)
+                module_list.append(dict_data)
 
-        module_detail_list_info = self.module_dao.select_module_detail(data)
-        for el in module_list:
-            for row in module_detail_list_info:
+            module_detail_list_info = self.module_dao.select_module_detail(data)
+            for el in module_list:
+                for row in module_detail_list_info:
 
-                if el['module_id'] == row['module_id']:
-                    dict_data = dict()
-                    dict_data['id'] = row['producer_id']
-                    dict_data['name'] = row['producer_name']
-                    el['producers'].append(dict_data)
+                    if el['module_id'] == row['module_id']:
+                        dict_data = dict()
+                        dict_data['id'] = row['producer_id']
+                        dict_data['name'] = row['producer_name']
+                        el['producers'].append(dict_data)
 
-        return module_list
+            return module_list
+
+        except KeyError:
+            abort(400, description="INVALID_KEY")
 
     def sign_module_producer(self, data):
         try:
