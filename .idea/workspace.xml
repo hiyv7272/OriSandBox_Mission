@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/module_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/module_dao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/module_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/module_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/module_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/module_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/COSGRAM_schema_user_v.1.0.0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/schema/COSGRAM_schema_user_v.1.0.0.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/user_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/user_dao.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,5 +64,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="808" y="23" width="829" height="1007" key="dock-window-1/0.23.1680.1027/-150.-1057.1920.1057@0.23.1680.1027" timestamp="1599942438168" />
+    <state x="490" y="-772" width="639" height="486" key="find.popup" timestamp="1600124370653">
+      <screen x="-150" y="-1057" width="1920" height="1057" />
+    </state>
+    <state x="490" y="-772" width="639" height="486" key="find.popup/0.23.1680.1027/-150.-1057.1920.1057@-150.-1057.1920.1057" timestamp="1600124370653" />
   </component>
 </project>

@@ -37,14 +37,14 @@ class ModuleDao:
             traceback.print_exc()
             abort(400, description="INVAILD_DATA")
 
-    def insert_user_module_producer(self, data):
+    def insert_user_producer_module(self, data):
         try:
             db_cursor = self.db_connection.cursor(buffered=True, dictionary=True)
 
             data['create_datetime'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             data['update_datetime'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-            insert_user_module_producer_query = (
+            insert_user_producer_module_query = (
                 """
                 INSERT INTO COSGRAM.USER_PRODUCER_MODULE (USER_id, PRODUCER_id, MODULE_id, 
                             create_datetime, update_datetime, is_use)
@@ -52,7 +52,7 @@ class ModuleDao:
                 """
             )
 
-            db_cursor.execute(insert_user_module_producer_query, data)
+            db_cursor.execute(insert_user_producer_module_query, data)
             self.db_connection.commit()
             db_cursor.close()
 
@@ -64,24 +64,26 @@ class ModuleDao:
             traceback.print_exc()
             abort(400, description="INVAILD_DATA")
 
-    def delete_user_module_producer(self, data):
+    def delete_user_producer_module(self, data):
         try:
             db_cursor = self.db_connection.cursor(buffered=True, dictionary=True)
 
             data['create_datetime'] = '2037-12-31'
             data['update_datetime'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-            delete_user_module_producer_query = (
+            delete_user_producer_module_query = (
                 """
                 UPDATE COSGRAM.USER_PRODUCER_MODULE 
                 SET    is_use = 0, create_datetime = %(create_datetime)s, update_datetime = %(update_datetime)s
                 WHERE  USER_id = %(user_id)s
                 AND    PRODUCER_id = %(producer_id)s
                 AND    MODULE_id =  %(module_id)s
+                AND    is_use = 1
+                LIMIT 1
                 """
             )
 
-            db_cursor.execute(delete_user_module_producer_query, data)
+            db_cursor.execute(delete_user_producer_module_query, data)
             self.db_connection.commit()
             db_cursor.close()
 

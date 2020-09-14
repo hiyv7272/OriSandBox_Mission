@@ -20,7 +20,6 @@ class ModuleService:
 
         module_detail_list_info = self.module_dao.select_module_detail(data)
         for el in module_list:
-            print(el)
             for row in module_detail_list_info:
 
                 if el['module_id'] == row['module_id']:
@@ -33,14 +32,14 @@ class ModuleService:
 
     def sign_module_producer(self, data):
         try:
-            return self.module_dao.insert_user_module_producer(data)
+            return self.module_dao.insert_user_producer_module(data)
 
         except KeyError:
             abort(400, description="INVALID_KEY")
 
     def delete_module_producer(self, data):
         try:
-            return self.module_dao.delete_user_module_producer(data)
+            return self.module_dao.delete_user_producer_module(data)
 
         except KeyError:
             abort(400, description="INVALID_KEY")
