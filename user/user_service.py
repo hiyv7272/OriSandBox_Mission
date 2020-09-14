@@ -50,13 +50,19 @@ class UserService:
         return token.decode('UTF-8')
 
     def user_profile(self, data):
+        try:
+            user_info = self.user_dao.select_user(data)
+            if not user_info:
+                return abort(400, description='NOT_EXISTS_USER')
 
-        user_info = self.user_dao.select_user(data)
-        user_profile = OrderedDict()
-        user_profile['email'] = user_info['email']
-        user_profile['name'] = user_info['name']
+            user_profile = OrderedDict()
+            user_profile['email'] = user_info['email']
+            user_profile['name'] = user_info['name']
 
-        user_profile['create_datetime'] = datetime.strftime(user_info['create_datetime'], '%Y-%m-%d %H:%m:%S')
-        user_profile['update_datetime'] = datetime.strftime(user_info['update_datetime'], '%Y-%m-%d %H:%m:%S')
+            user_profile['create_datetime'] = datetime.strftime(user_info['create_datetime'], '%Y-%m-%d %H:%m:%S')
+            user_profile['update_datetime'] = datetime.strftime(user_info['update_datetime'], '%Y-%m-%d %H:%m:%S')
 
-        return user_profile
+            return user_profile
+
+        except KeyError:
+            abort(400, description="INVALID_KEY")
