@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bdb4253-3a75-4305-b833-43fc75050dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/module_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/module_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module/module_view.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/schema/COSGRAM_schema_product_feedback_v.1.0.1.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/user_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/user_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/user_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/module_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/module_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/module_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/module_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/module_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/module_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schema/COSGRAM_schema_user_v.1.0.0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/schema/COSGRAM_schema_user_v.1.0.0.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/user_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/user_dao.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

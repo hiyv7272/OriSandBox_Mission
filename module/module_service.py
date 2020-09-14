@@ -1,4 +1,5 @@
 from flask import abort
+from datetime import datetime
 
 
 class ModuleService:
@@ -8,31 +9,38 @@ class ModuleService:
     def module_list(self, data):
         module_list_info = self.module_dao.select_module_list(data)
 
-        return module_list_info
+        module_list = list()
+        for row in module_list_info:
+            dict_data = dict()
+            dict_data['module_id'] = row['id']
+            dict_data['module_name'] = row['name']
+            dict_data['producers'] = list()
 
-    def module_detail(self, data):
-        try:
+            module_list.append(dict_data)
 
-            module_detail_list_info = self.module_dao.select_module_detail(data)
-
-            module_detail_list = list()
-
+        module_detail_list_info = self.module_dao.select_module_detail(data)
+        for el in module_list:
+            print(el)
             for row in module_detail_list_info:
-                dict_data = dict()
-                dict_data['module_id'] = row['module_id']
-                dict_data['module_name'] = row['module_name']
-                dict_data['producers'] = list()
 
-                for subrow in module_detail_list_info:
-                    if dict_data['module_id'] == subrow['module_id']:
-                        sub_dict_data = dict()
-                        sub_dict_data['id'] = subrow['producer_id']
-                        sub_dict_data['name'] = subrow['producer_name']
-                        dict_data['producers'].append(sub_dict_data)
+                if el['module_id'] == row['module_id']:
+                    dict_data = dict()
+                    dict_data['id'] = row['producer_id']
+                    dict_data['name'] = row['producer_name']
+                    el['producers'].append(dict_data)
 
-            module_detail_list.append(dict_data)
+        return module_list
 
-            return module_detail_list
+    def sign_module_producer(self, data):
+        try:
+            return self.module_dao.insert_user_module_producer(data)
+
+        except KeyError:
+            abort(400, description="INVALID_KEY")
+
+    def delete_module_producer(self, data):
+        try:
+            return self.module_dao.delete_user_module_producer(data)
 
         except KeyError:
             abort(400, description="INVALID_KEY")
@@ -40,7 +48,17 @@ class ModuleService:
     def product_list(self, data):
         try:
             product_list_info = self.module_dao.select_product_list(data)
-            return product_list_info
+            product_list = list()
+            for row in product_list_info:
+                dict_data = dict()
+                dict_data['id'] = row['id']
+                dict_data['name'] = row['name']
+                dict_data['regist_datetime'] = datetime.strftime(row['regist_datetime'], '%Y-%m-%d %H:%m:%S')
+                dict_data['update_datetime'] = datetime.strftime(row['update_datetime'], '%Y-%m-%d %H:%m:%S')
+
+                product_list.append(dict_data)
+
+            return product_list
 
         except KeyError:
             abort(400, description="INVALID_KEY")

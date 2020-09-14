@@ -33,15 +33,27 @@ class ModuleView:
 
             return jsonify({'data': module_list})
 
-        @app.route('/module/datail', methods=['GET'])
+        @app.route('/module/list', methods=['POST'])
         @login_decorator
-        def module_detail_list():
+        def sign_module_producer():
             data = dict()
             data['user_id'] = g.user_info['id']
             data['module_id'] = request.args.get('module_id')
-            module_detail_list = module_service.module_detail(data)
+            data['producer_id'] = request.args.get('producer_id')
+            module_service.sign_module_producer(data)
 
-            return jsonify({'data': module_detail_list})
+            return jsonify({'message': 'SUCCESS'})
+
+        @app.route('/module/list', methods=['DELETE'])
+        @login_decorator
+        def delete_module_producer():
+            data = dict()
+            data['user_id'] = g.user_info['id']
+            data['module_id'] = request.args.get('module_id')
+            data['producer_id'] = request.args.get('producer_id')
+            module_service.delete_module_producer(data)
+
+            return jsonify({'message': 'SUCCESS'})
 
         @app.route('/product/list', methods=['GET'])
         @login_decorator
