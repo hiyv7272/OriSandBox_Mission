@@ -8,6 +8,9 @@ from config import DATABASES
 from user.user_dao import UserDao
 from user.user_service import UserService
 from user.user_view import UserView
+from module.module_dao import ModuleDao
+from module.module_service import ModuleService
+from module.module_view import ModuleView
 
 
 class Services:
@@ -42,12 +45,15 @@ def create_app(test_config=None):
 
     # DataModel layer
     user_dao = UserDao(connection_pool)
+    module_dao = ModuleDao(connection_pool)
 
     # Service layer
     services = Services
     services.user_service = UserService(user_dao)
+    services.module_service = ModuleService(module_dao)
 
     # Create endpoints
     UserView.create_endpoint(app, services)
+    ModuleView.create_endpoint(app, services)
 
     return app

@@ -44,4 +44,4 @@ class UserView:
         def user_profile():
             user_info = user_service.user_profile(g.user_info)
 
-            return jsonify({'user_profile': user_info})
+            return jsonify({'data': user_info})

@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bdb4253-3a75-4305-b833-43fc75050dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/user_dao.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/user_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/user_view.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/module_dao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/module_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/module_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/schema/COSGRAM_schema_product_feedback_v.1.0.1.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/user_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/user_view.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,5 +66,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="341" y="175" key="SettingsEditor/0.23.1680.1027/-150.-1057.1920.1057@0.23.1680.1027" timestamp="1599843777457" />
+    <state x="808" y="23" width="829" height="1007" key="dock-window-1" timestamp="1599942438168">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="808" y="23" width="829" height="1007" key="dock-window-1/0.23.1680.1027/-150.-1057.1920.1057@0.23.1680.1027" timestamp="1599942438168" />
   </component>
 </project>

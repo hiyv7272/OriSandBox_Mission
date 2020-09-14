@@ -44,10 +44,7 @@ class UserService:
             abort(400, description="INVALID_KEY")
 
     def generate_access_token(self, data):
-        payload = {
-            'id': data['id'],
-            'exp': datetime.utcnow() + timedelta(seconds=60 * 60 * 24)
-        }
+        payload = {'id': data['id']}
         token = jwt.encode(payload, current_app.config['JWT_SECRET_KEY'], algorithm='HS256')
 
         return token.decode('UTF-8')
