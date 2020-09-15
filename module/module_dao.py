@@ -146,8 +146,6 @@ class ModuleDao:
             db_cursor.execute(select_product_module_query, data)
             product_module_info = db_cursor.fetchone()
 
-            print('product_module_info:', product_module_info)
-
             return product_module_info
 
         except KeyError as err:
@@ -190,9 +188,36 @@ class ModuleDao:
 
             select_naver_feedinfo_query = (
                 """
+                SELECT id, PRODUCT_id, writer, title, comment, rate, regist_datetime, update_datetime, is_use  
+                FROM COSGRAM.NAVER_FEEDBACK AS T101
+                WHERE T101.PRODUCT_id = %(product_id)s
+                AND   T101.is_use = 1
+                """
+            )
+
+            db_cursor.execute(select_naver_feedinfo_query, data)
+            naver_feedinfo = db_cursor.fetchall()
+            print('naver_feedinfo', naver_feedinfo)
+
+            return naver_feedinfo
+
+        except KeyError as err:
+            traceback.print_exc()
+            abort(400, description="INVAILD_KEY")
+
+        except mysql.connector.Error as err:
+            traceback.print_exc()
+            abort(400, description="INVAILD_DATA")
+
+    def select_naver_feed_images(self, data):
+        try:
+            db_cursor = self.db_connection.cursor(buffered=True, dictionary=True)
+
+            select_naver_feedinfo_query = (
+                """
                 SELECT T101.id, T101.PRODUCT_id, T101.writer, T101.title, T101.comment, 
-                       T101.rate, T101.regist_datetime, T101.update_datetime, T101.is_use,  
-                       T102.image_url
+                       T101.rate, T101.regist_datetime, T101.update_datetime, T101.is_use,
+                       T102.image_url  
                 FROM COSGRAM.NAVER_FEEDBACK AS T101
                      INNER JOIN  COSGRAM.NAVER_FEEDBACK_IMAGE AS T102
                              ON  T101.id = T102.NAVER_FEEDBACK_id
@@ -204,6 +229,7 @@ class ModuleDao:
 
             db_cursor.execute(select_naver_feedinfo_query, data)
             naver_feedinfo = db_cursor.fetchall()
+            print('naver_feedinfo', naver_feedinfo)
 
             return naver_feedinfo
 

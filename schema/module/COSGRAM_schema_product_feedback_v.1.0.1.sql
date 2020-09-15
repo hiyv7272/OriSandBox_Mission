@@ -47,8 +47,8 @@ INSERT INTO COSGRAM.PRODUCT (id, PRODUCER_id, MODULE_id, name, regist_datetime, 
     3,
     1,
     1,
-    '[닥터마틴] 1461 3홀 모노 블랙 14345001 14345001',
-    '2017-08-21',
+    '닥터마틴 2976 첼시부츠 11853001',
+    '2019-08-21',
     NOW(),
     1
 ),
@@ -146,6 +146,61 @@ INSERT INTO COSGRAM.NAVER_FEEDBACK (id, PRODUCT_id, writer, title, comment, rate
     '판매자님 답변에는 제조공정중 미세한 차이가 발생 할 수 있는 부분이라고 하는데 구매자로서는 착장 후에 전혀 다른 신발 착용 했다고 보여 집니다. 조용히 처리하기 위해 1:1 문의로 교환 및 환불 요청 했으나 한번 착장 했다는 이유로 불가하다고만 함. 구매 하시는 분들 사진 참고 하셔야 손해 안보실거에요. 미세한 차이가 구매자의 입장과 판매자의 입장차가 엄청 크게 느껴집니다. 아이폰 9분할로 촬영 한 사진 입니다. 구매에 도움이 되시길 바랍니다.',
     1,
     '2020-06-06',
+    NOW(),
+    1
+),
+(
+	6,
+    (SELECT id FROM COSGRAM.PRODUCT WHERE name = '뉴발란스 327 블랙 화이트 MS327CPG' LIMIT 1),
+    'oloo****',
+    '청바지 그리고 반바지와 잘어울릴듯... 배송 매우 빠름',
+    '청바지 그리고 반바지와 잘어울릴듯... 배송 매우 빠름',
+    5,
+    '2020-08-05',
+    NOW(),
+    1
+),
+(
+    7,
+    (SELECT id FROM COSGRAM.PRODUCT WHERE name = '뉴발란스 327 블랙 화이트 MS327CPG' LIMIT 1),
+    'grut****',
+    '발볼 넓으신분 아니면 정사이즈 하세요. 흰끈 사셔서 바꾸는거 추천합니다. 신발 진짜 이뻐요',
+    '발볼 넓으신분 아니면 정사이즈 하세요. 흰끈 사셔서 바꾸는거 추천합니다. 신발 진짜 이뻐요',
+    5,
+    '2020-09-02',
+    NOW(),
+    1
+),
+(
+    8,
+    (SELECT id FROM COSGRAM.PRODUCT WHERE name = '뉴발란스 327 블랙 화이트 MS327CPG' LIMIT 1),
+    'bir1****',
+    '생각보다 질이 좋고 발이 편해서 좋네요^^ 신발 자체는 커보입니다',
+    '생각보다 질이 좋고 발이 편해서 좋네요^^ 신발 자체는 커보입니다',
+    5,
+    '2020-08-21',
+    NOW(),
+    1
+),
+(
+    9,
+    (SELECT id FROM COSGRAM.PRODUCT WHERE name = '닥터마틴 2976 첼시부츠 11853001' LIMIT 1),
+    'goan****',
+    '저가 평소240에 발볼이.좀있는편이고 컨버스는 230신는데 이건 발볼때문에240 정사이즈로 구매했어요 신발이 워낙커서 한사이즈나 반사이즈 내려서 구매하라는후기가많았는데 저는 발볼이',
+    '저가 평소240에 발볼이.좀있는편이고 컨버스는 230신는데 이건 발볼때문에240 정사이즈로 구매했어요 신발이 워낙커서 한사이즈나 반사이즈 내려서 구매하라는후기가많았는데 저는 발볼이 걸려서,,30도 맞을것같긴한데 좀 불편할',
+    5,
+    '2020-07-31',
+    NOW(),
+    1
+),
+(
+    10,
+    (SELECT id FROM COSGRAM.PRODUCT WHERE name = '닥터마틴 2976 첼시부츠 11853001' LIMIT 1),
+    'eepp****',
+    '배송은 6일 정도 걸렸어요^^매장에서 신어보니 원래 235 신는데 이건 220 사이즈가 맞더라구요~발 사이즈는 맞는데발목 부분이 짱짱하니 작아요그래도 신고나면 딱 잡아줘서 편하긴 ',
+    '배송은 6일 정도 걸렸어요^^매장에서 신어보니 원래 235 신는데 이건 220 사이즈가 맞더라구요~발 사이즈는 맞는데발목 부분이 짱짱하니 작아요그래도 신고나면 딱 잡아줘서 편하긴 합니다.',
+    5,
+    '2019-12-02',
     NOW(),
     1
 )
@@ -296,6 +351,62 @@ INSERT INTO COSGRAM.NAVER_FEEDBACK_IMAGE (id, NAVER_FEEDBACK_id, image_url, crea
     NOW(),
     NOW(),
     1
+),
+(
+    17,
+    6,
+    'https://phinf.pstatic.net/checkout/20200805_295/1596601884796jUCq7_JPEG/review-attachment-e3cb1c69-1fb7-4b76-bb68-07ee375c074c.jpeg?type=f287',
+    NOW(),
+    NOW(),
+    1
+),
+(
+    18,
+    6,
+    'https://phinf.pstatic.net/checkout/20200805_16/15966018964942BsFP_JPEG/review-attachment-45a1eb05-2f2e-4777-a8b6-5d3bdcc96441.jpeg?type=f287',
+    NOW(),
+    NOW(),
+    1
+),
+(
+    19,
+    7,
+    'https://phinf.pstatic.net/checkout/20200902_182/1599023436871nb7Kf_JPEG/review-attachment-69b68f8c-2a69-4a04-a6c4-56b6487e906b.jpeg?type=f287',
+    NOW(),
+    NOW(),
+    1
+),
+(
+    20,
+    9,
+    'https://phinf.pstatic.net/checkout/20200731_135/1596167412361kEVN6_JPEG/review-attachment-858595f1-7bcc-40e1-96e9-99dd64a3cf0a.jpeg?type=f287',
+    NOW(),
+    NOW(),
+    1
+),
+(
+    21,
+    10,
+    'https://phinf.pstatic.net/checkout/20191202_225/1575293916973FAh7M_JPEG/569F40E4-E61E-4993-A9A3-4DEF39A40BBF.jpeg?type=f287',
+    NOW(),
+    NOW(),
+    1
+),
+(
+    22,
+    10,
+    'https://phinf.pstatic.net/checkout/20191202_14/1575293918419O7IMD_JPEG/F2A37CDE-A4AC-49FA-91CC-5F42C365F196.jpeg?type=f287',
+    NOW(),
+    NOW(),
+    1
+),
+(
+    23,
+    10,
+    'https://phinf.pstatic.net/checkout/20191202_14/1575293918419O7IMD_JPEG/F2A37CDE-A4AC-49FA-91CC-5F42C365F196.jpeg?type=f287',
+    NOW(),
+    NOW(),
+    1
 )
 ;
 
@@ -403,7 +514,7 @@ INSERT INTO COSGRAM.AMAZON_FEEDBACK (id, PRODUCT_id, writer, title, comment, rat
     5,
     'Tucker Alleborn',
     ' Loud popping sound while walking...',
-    'First off, these shoes are insanely comfortable, and fit perfectly. However, the "bubble" traction pattern on the bottom of the shoe makes a loud snap / pop when you walk, at literally the volume of popping bubble packaging. Numerous people have commented on this, it\''s completely unmistakable. This goes for nearly all surfaces. Really odd design choice, or maybe it was just my size (12.5).',
+    'First off, these shoes are insanely comfortable, and fit perfectly. However, the "bubble" traction pattern on the bottom of the shoe makes a loud snap / pop when you walk, at literally the volume of popping bubble packaging. Numerous people have commented on this, its completely unmistakable. This goes for nearly all surfaces. Really odd design choice, or maybe it was just my size (12.5).',
     2,
     '2020-01-16',
     NOW(),

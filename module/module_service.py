@@ -1,5 +1,6 @@
 from flask import abort
 from datetime import datetime
+from collections import OrderedDict
 
 
 class ModuleService:
@@ -69,25 +70,28 @@ class ModuleService:
     def product_detail_list(self, data):
         try:
             product_module_info = self.module_dao.select_product_module(data)
+            print('product_module_info',product_module_info)
             if product_module_info:
                 if product_module_info['module_name'] == 'NAVER_SHOPPING':
                     naver_product_detail_list_info = self.module_dao.select_naver_feedinfo(data)
 
                     naver_product_detail_list = list()
                     for row in naver_product_detail_list_info:
-                        dict_data = dict()
-                        dict_data['id'] = row['id']
-                        dict_data['writer'] = row['writer']
-                        dict_data['title'] = row['title']
-                        dict_data['comment'] = row['comment']
-                        dict_data['rate'] = row['rate']
-                        dict_data['images'] = list()
+                            dict_data = OrderedDict()
+                            dict_data['id'] = row['id']
+                            dict_data['writer'] = row['writer']
+                            dict_data['title'] = row['title']
+                            dict_data['comment'] = row['comment']
+                            dict_data['rate'] = row['rate']
+                            dict_data['images'] = list()
 
-                        for subrow in naver_product_detail_list_info:
-                            if dict_data['id'] == subrow['id']:
-                                dict_data['images'].append(subrow['image_url'])
+                            naver_product_detail_list.append(dict_data)
 
-                        naver_product_detail_list.append(dict_data)
+                    naver_feed_image_info = self.module_dao.select_naver_feed_images(data)
+                    for row in naver_product_detail_list:
+                        for subrow in naver_feed_image_info:
+                            if row['id'] == subrow['id']:
+                                row['images'].append(subrow['image_url'])
 
                     return naver_product_detail_list
 
@@ -121,5 +125,7 @@ class ModuleService:
 
                     return amazon_product_detail_list
 
+        except ValueError:
+            abort(400, description="INVALID_DATA")
         except KeyError:
             abort(400, description="INVALID_KEY")
