@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bdb4253-3a75-4305-b833-43fc75050dd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/schema/COSGRAM_schema_total_v.1.0.0.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/module_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/module_dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module/module_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/module/module_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/COSGRAM_schema_product_feedback_v.1.0.0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/schema/module/COSGRAM_schema_product_feedback_v.1.0.0.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/COSGRAM_schema_product_feedback_v.1.0.1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/schema/module/COSGRAM_schema_product_feedback_v.1.0.1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schema/COSGRAM_schema_user_v.1.0.0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/schema/user/COSGRAM_schema_user_v.1.0.0.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +23,12 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/schema" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -46,6 +40,7 @@
       <recent name="$PROJECT_DIR$/schema" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -64,9 +59,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="558" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027/-150.-1057.1920.1057@0.23.1680.1027" timestamp="1599941972312" />
-    <state x="341" y="175" key="SettingsEditor" timestamp="1599843777457">
+    <state x="341" y="175" key="SettingsEditor" timestamp="1600829334874">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
+    <state x="341" y="175" key="SettingsEditor/-1920.23.1920.1057/0.23.1680.1027@0.23.1680.1027" timestamp="1600829334874" />
     <state x="341" y="175" key="SettingsEditor/0.23.1680.1027/-150.-1057.1920.1057@0.23.1680.1027" timestamp="1599843777457" />
     <state x="808" y="23" width="829" height="1007" key="dock-window-1" timestamp="1599942438168">
       <screen x="0" y="23" width="1680" height="1027" />
